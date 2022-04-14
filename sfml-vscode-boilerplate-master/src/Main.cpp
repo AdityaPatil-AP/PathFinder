@@ -15,6 +15,8 @@ using namespace std;
 using namespace sf;
 #define num 60 //number of cells in a row
 
+// Hi
+
 //--------Dijkstra--------
 vector<pair<int, int>> pathD; //Shortest pathD
 bool sptSet[num][num];		  //explored cells
