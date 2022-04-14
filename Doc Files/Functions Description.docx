@@ -1,0 +1,155 @@
+Reference Link : -   cppreference.com
+
+SFML - Simple and Fast Multimedia Library
+SFML is multimedia.
+SFML provides a simple interface to the various components of your PC, to ease the development of games and multimedia applications. It is composed of five modules: system, window, graphics, audio and network.
+
+SFML is a multimedia library, meaning that it provides a layer between you and the hardware. It is split into five modules:
+
+System: This is a core module upon which all other modules are built. It provides two-dimensional and three-dimensional vector classes, clocks, threads, and Unicode strings, among other things.
+Window: The Window module makes it possible to create application windows, and to collect user input, such as mouse movement or key presses.
+Graphics: This module provides all functionalities that are related to two-dimensional rendering, such as images, texts, shapes, and colors.
+Audio: SFML also offers a module to work with sound. When you want to load a music theme and play it on the computer's loudspeakers, this is the module you have to look for.
+Network: Another medium SFML covers is the network, a more and more important part of our interconnected world. This module allows you to send data over LAN or the Internet; it also lets you work with protocols, such as HTTP or FTP.
+
+
+WHAT IS A FILE EXTENSION?
+
+A file extension is the set of three or four characters at the end of a filename; in this case, .hpp. File extensions tell you what type of file it is, and tell Windows what programs can open it. Windows often associates a default program to each file extension, so that when you double-click the file, the program launches automatically. When that program is no longer on your PC, you can sometimes get an error when you try to open the associated file.
+
+
+WHAT IS A .HPP FILE?
+
+HPP files are C++ Header Files or header files that are written in the C++ programming language. These files are mainly categorized as developer files wherein there is a possibility to insert these files to a .CPP source code file, provided the “#include directive” is used. Because of this, HPP files can be used to store component codes that are reusable. In other words, since HPP files are header files, they are also used by programmers for the separation of certain program source code elements into files that can still be used. Most of the time, these files contain subroutines, variables, forward declarations of classes as well as other identifiers. These files can also be used as the C programming language header file default extension because they also make use of the .H extension. There are several applications that can be used to open HPP files such as Apple Xcode, Microsoft Visual Studio 2010, Code::Blocks, MacroMates TextMate, BloodshedSoftware Dev-C++, GNU project C and C++ compiler (GCC), etc.
+
+#include<SFML/Audio.hpp>  = Sounds, streaming (music or custom sources), recording, spatialization.
+#include<SFML/Graphics.hpp> = Used for Graphics
+#include<SFML/Window.hpp> = To create a different application window
+#include<bits/stdc++.h> = It is basically a header file that includes every standard library.
+#include<float.h> = Used for floating point numbers
+#include<functional> = Function objects are objects specifically designed to be used with a syntax similar to that of functions. In C++, this is achieved by defining member function operator() in their class, like for example : 
+1
+2
+3
+4
+struct myclass {
+  int operator()(int a) {return a;}
+} myobject;
+int x = myobject (0);           // function-like syntax with object myobject.
+
+#include <set> =  Header that defines the set and multiset container classes.
+#include <sstream> = A sstream/stringstream associates a string object with a stream allowing you to read from the string as if it were a stream (like cin). To use stringstream, we need to include sstream header file. The stringstream class is extremely useful in parsing input. 
+#include <string.h> = The string.h header defines one variable type, one macro, and various functions for manipulating arrays of characters.
+#include <string> = The C++ strings library includes support for three general types of strings:
+std::basic_string - a templated class designed to manipulate strings of any character type.
+std::basic_string_view (C++17) - a lightweight non-owning read-only view into a subsequence of a string.
+Null-terminated strings - arrays of characters terminated by a special null character.
+#include <vector> = Used for vectors which are sequence containers representing arrays that can change in size.
+
+What does 'using namespace std' mean in C++?
+
+Consider a situation, when we have two persons with the same name, Piyush, in the same class. Whenever we need to differentiate them definitely we would have to use some additional information along with their name, like either the area, if they live in a different area or their mother’s or father’s name, etc.
+
+The same situation can arise in your C++ applications. For example, you might be writing some code that has a function called xyz() and there is another library available which is also having same function xyz(). Now the compiler has no way of knowing which version of xyz() function you are referring to within your code.
+
+A namespace is designed to overcome this difficulty and is used as additional information to differentiate similar functions, classes, variables etc. with the same name available in different libraries. Using namespace, you can define the context in which names are defined. In essence, a namespace defines a scope.
+
+C++ has a standard library that contains common functionality you use in building your applications like containers, algorithms, etc. If names used by these were out in the open, for example, if they defined a queue class globally, you'd never be able to use the same name again without conflicts. So they created a namespace, std to contain this change.
+
+The using namespace statement just means that in the scope it is present, make all the things under the std namespace available without having to prefix std:: before each of them.
+
+While this practice is okay for short example code or trivial programs, pulling in the entire std namespace into the global namespace is not a good habit as it defeats the purpose of namespaces and can lead to name collisions. (Even if there are initially no name collisions, they can crop up during maintenance as more code, libraries, etc. are added to the project.) This situation is commonly referred to as namespace pollution.
+
+The same is for using namespace sf.
+
+Main function:
+
+int filled[num][num];
+
+Here we are defining 2d array sort of matrix 
+Num is already defined as 60 (#define num 60).
+
+int grid[60][60];  
+
+We are filling the values of grid matrix : -
+
+for (int i = 0; i < 60; i++)
+        for (int j = 0; j < 60; j++)
+        {
+            if (i == 0 || i == 59 || j == 0 || j == 59) //walls
+                grid[i][j] = 0;
+            else
+                grid[i][j] = 1;
+        }
+
+Here we will assign the corners of the grid as 0. They are the walls.
+Others would be set as 1.
+
+for (int i = 0; i < num; i++)
+        for (int j = 0; j < num; j++)
+        {
+            sptSet[i][j] = false; //dijkstra all unexplored
+            filled[i][j] = 0;     //all uncolored
+        }
+
+Here sptSet 2d array to be set as false
+Filled 2d array would be 0 for all grid boxes which means all uncolored which indicates the stopping blocks data.
+
+memset(closedList, false, sizeof(closedList));
+
+So here all the values in closedList are being replaced by false. 
+Memset() is a C++ function. It copies a single character for a specified number of times to an object. It is defined in the <cstring> header file.
+Parameters:
+str[] : Pointer to the object to copy the character.
+ch : The character to copy.
+n : Number of bytes to copy.
+
+
+
+
+
+Basically, it just replaces the whole string indexes with that particular character.
+
+Multithreading
+Multithreading is a specialized form of multitasking and multitasking is the feature that allows your computer to run two or more programs concurrently. In general, there are two types of multitasking: process-based and thread-based.
+Process-based multitasking handles the concurrent execution of programs. Thread-based multitasking deals with the concurrent execution of pieces of the same program.
+A multithreaded program contains two or more parts that can run concurrently. Each part of such a program is called a thread, and each thread defines a separate path of execution.
+
+int source_x = 2, source_y = 2, dest_x = 50, dest_y = 56; //Origin(2,3)->Goal(50,56)
+    Thread threadD(std::bind(&dijkstra, source_x, source_y, dest_x, dest_y, grid));
+    Thread threadA(std::bind(&Astar, make_pair(source_x, source_y), make_pair(dest_x, dest_y), grid));
+
+	
+So here, since we used thread, the functions in the std:: bind which is used to bind them all together, run concurrently.
+
+    RenderWindow window(VideoMode(800, 600), "Grid");
+
+RenderWindow is used to create a new window to display the grid.
+
+// // Text
+    sf::Font font;
+    font.loadFromFile("arial.ttf");
+    sf::Text text1("DIJKSTRA", font, 15);
+    sf::Text text2("A*", font, 24);
+ 
+
+Just for text. For the font type, color, and the font written, font size
+
+// Shapes
+    RectangleShape buttonStartD(Vector2f(75, 25)); //button dijkstra
+    buttonStartD.setFillColor(Color::Green);
+    RectangleShape buttonStartA(Vector2f(75, 25)); //button Astar
+    buttonStartA.setFillColor(Color::Magenta);
+
+
+For the two buttons.
+
+
+
+bool 
+pollEvent (Event &event)
+ 
+Pop the event on top of the event queue, if any, and return it. 
+
+
+
