@@ -15,3 +15,13 @@ Graphics: This module provides all functionalities that are related to two-dimen
 Audio: SFML also offers a module to work with sound. When you want to load a music theme and play it on the computer's loudspeakers, this is the module you have to look for.
 
 Network: Another medium SFML covers is the network, a more and more important part of our interconnected world. This module allows you to send data over LAN or the Internet; it also lets you work with protocols, such as HTTP or FTP.
+
+Start from the given source cell in the matrix and explore all four possible paths.
+Check if the destination is reached or not.
+Explore all the paths and backtrack if destination is not reached.
+And also keep track of visited cells using an array.
+Valid Moves are:
+ left: (i, j) ——> (i, j – 1)
+ right: (i, j) ——> (i, j + 1)
+ top: (i, j) ——> (i - 1, j)
+ bottom: (i, j) ——> (i + 1, j )
