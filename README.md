@@ -16,7 +16,7 @@ Audio: SFML also offers a module to work with sound. When you want to load a mus
 
 Network: Another medium SFML covers is the network, a more and more important part of our interconnected world. This module allows you to send data over LAN or the Internet; it also lets you work with protocols, such as HTTP or FTP.
 
-Implementation of Dijkstra : - 
+# Implementation of Dijkstra : - 
 
 Start from the given source cell in the matrix and explore all four possible paths.
 Check if the destination is reached or not.
@@ -32,3 +32,16 @@ Valid Moves are:
  top: (i, j) ——> (i - 1, j)
  
  bottom: (i, j) ——> (i + 1, j )
+ 
+# Implementation of A* : - 
+ 
+ A* expands paths that are already less expensive by using this function:
+ 
+f(n)=g(n)+h(n),
+wher
+f(n) = total estimated cost of path through node 
+
+g(n) = cost so far to reach node n
+
+h(n) = estimated cost from n to goal. This is the heuristic part of the cost function, so it is like a guess.
+
