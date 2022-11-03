@@ -16,6 +16,8 @@ Audio: SFML also offers a module to work with sound. When you want to load a mus
 
 Network: Another medium SFML covers is the network, a more and more important part of our interconnected world. This module allows you to send data over LAN or the Internet; it also lets you work with protocols, such as HTTP or FTP.
 
+To avoid, the clash between two processes, we have used two different threads so that they can operate independent of one another.
+
 # Implementation of Dijkstra : - 
 
 Start from the given source cell in the matrix and explore all four possible paths.
